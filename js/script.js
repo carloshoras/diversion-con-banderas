@@ -6,8 +6,7 @@ const fetchPaises = async () => {
     paises.forEach((pais) => {
         let {name: {common}, flags, capital, population, car: {side} } = pais
         capital = capital !== undefined? capital[0] : "None";
-        console.log(common, flags[0], capital, population, side)
-        listaPaises.push({name: common, flag: flags[0], capital: capital, population: population, side: side})
+        listaPaises.push({name: common, flag: flags[1], capital: capital, population: population, side: side})
     })
     listaPaises.sort((a,b) => a.name.localeCompare(b.name))
     return listaPaises
